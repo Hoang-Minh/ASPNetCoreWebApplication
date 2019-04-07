@@ -47,7 +47,8 @@ namespace ASPNetCoreWebApplication
             }
 
             app.UseHttpsRedirection();            
-            app.UseMvc();            
+            app.UseMvc();
+            productsDbContext.Database.EnsureCreated();
         }
     }
 }
